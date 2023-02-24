@@ -28,7 +28,7 @@ abstract contract GovernorMockUpgradeable is
         uint256[] memory values,
         bytes[] memory calldatas,
         string memory description
-    ) public override(GovernorUpgradeable, GovernorProposalThresholdUpgradeable) returns (uint256) {
+    ) internal override(GovernorUpgradeable, GovernorProposalThresholdUpgradeable) returns (uint256) {
         return super.propose(targets, values, calldatas, description);
     }
 

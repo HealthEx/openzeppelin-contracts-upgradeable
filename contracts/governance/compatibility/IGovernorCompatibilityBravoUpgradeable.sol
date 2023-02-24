@@ -84,7 +84,7 @@ abstract contract IGovernorCompatibilityBravoUpgradeable is Initializable, IGove
         string[] memory signatures,
         bytes[] memory calldatas,
         string memory description
-    ) public virtual returns (uint256);
+    ) internal virtual returns (uint256);
 
     /**
      * @dev Part of the Governor Bravo's interface: _"Queues a proposal of state succeeded"_.

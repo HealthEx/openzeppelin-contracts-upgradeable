@@ -60,7 +60,7 @@ abstract contract GovernorCompatibilityBravoUpgradeable is Initializable, IGover
         uint256[] memory values,
         bytes[] memory calldatas,
         string memory description
-    ) public virtual override(IGovernorUpgradeable, GovernorUpgradeable) returns (uint256) {
+    ) internal virtual override(IGovernorUpgradeable, GovernorUpgradeable) returns (uint256) {
         _storeProposal(_msgSender(), targets, values, new string[](calldatas.length), calldatas, description);
         return super.propose(targets, values, calldatas, description);
     }
@@ -74,7 +74,7 @@ abstract contract GovernorCompatibilityBravoUpgradeable is Initializable, IGover
         string[] memory signatures,
         bytes[] memory calldatas,
         string memory description
-    ) public virtual override returns (uint256) {
+    ) internal virtual override returns (uint256) {
         _storeProposal(_msgSender(), targets, values, signatures, calldatas, description);
         return propose(targets, values, _encodeCalldata(signatures, calldatas), description);
     }

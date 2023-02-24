@@ -23,7 +23,7 @@ abstract contract GovernorProposalThresholdUpgradeable is Initializable, Governo
         uint256[] memory values,
         bytes[] memory calldatas,
         string memory description
-    ) public virtual override returns (uint256) {
+    ) internal virtual override returns (uint256) {
         return super.propose(targets, values, calldatas, description);
     }
 
