@@ -50,7 +50,7 @@ abstract contract GovernorCompatibilityBravoMockUpgradeable is
         uint256[] memory values,
         bytes[] memory calldatas,
         string memory description
-    ) public override(IGovernorUpgradeable, GovernorUpgradeable, GovernorCompatibilityBravoUpgradeable) returns (uint256) {
+    ) internal override(IGovernorUpgradeable, GovernorUpgradeable, GovernorCompatibilityBravoUpgradeable) returns (uint256) {
         return super.propose(targets, values, calldatas, description);
     }
 
